@@ -80,7 +80,6 @@ app.directive('tractSearchBar', function () {
 					success: gotTractSearch,
 					error:function (){
 						$scope.searching_for_tracts = false;
-						alert("Apologies that the database is having troubles.");
 					}
 				});
 			}
@@ -395,8 +394,6 @@ app.directive('tractCard', function () {
 						//_app.tract_saving = undefined;
 					},
 					error:function (data){
-						alert("Apologies that the database is having troubles.");
-						console.log(data);
 					}
 				});
 				
