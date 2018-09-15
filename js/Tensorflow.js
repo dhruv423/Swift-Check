@@ -2,12 +2,10 @@ let featureExtractor;
 let classifier;
 let video;
 let loss;
-let dogImages = 0;
 let banana1Images = 0;
 let banana2Images = 0;
 let banana3Images = 0;
 let appleImages = 0;
-let catImages = 0;
 
 function setup() {
   noCanvas();
@@ -41,22 +39,21 @@ function classify() {
 
 // A util function to create UI buttons
 function setupButtons() {
-	classifier.addImage('image/banana1/img', 'banana1');
+	classifier.addImage('classifier/banana1/img', 'banana1');
 	select('#amountOfBanana1Images').html(banana1Images++);
 	
-	classifier.addImage('banana2');
+	classifier.addImage('image/banana2/img', 'banana2');
 	select('#amountOfBanana2Images').html(banana2Images++);
 	
-	classifier.addImage('banana3');
+	classifier.addImage('image/banana3/img', 'banana3');
 	select('#amountOfBanana3Images').html(banana3Images++);
 	
-	classifier.addImage('apple');
+	classifier.addImage('image/apple/img', 'apple');
 	select('#amountOfAppleImages').html(AppleImages++);
 
   // Train Button
   train = select('#train');
-  train.mousePressed(function() {
-    classifier.train(function(lossValue) {
+	classifier.train(function(lossValue) {
       if (lossValue) {
         loss = lossValue;
         select('#loss').html('Loss: ' + loss);
@@ -64,7 +61,6 @@ function setupButtons() {
         select('#loss').html('Done Training! Final Loss: ' + loss);
       }
     });
-  });
 
   // Predict Button
   buttonPredict = select('#buttonPredict');
