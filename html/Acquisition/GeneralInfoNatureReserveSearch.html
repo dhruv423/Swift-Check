@@ -1,0 +1,15 @@
+
+
+<select ng-model = 'selected_nature_reserves[$index]'
+    class = "item-value"
+    ng-change = "update_people_search();"
+    style = "width:calc(100% - 60px); left:0px;">
+	
+     <option value="{{_app.selected_nature_reserve.property_name}}">{{_app.selected_nature_reserve.property_name}}</option>
+
+</select>
+
+<button 
+  ng-click = "removeNatureReserve($index);"
+  ng-hide = "selected_nature_reserves.length <=1"
+  class = "btn-sm btn-danger" style = "height:32px;"><h5><span class = 'glyphicons glyphicons-remove'></span></h5></button>

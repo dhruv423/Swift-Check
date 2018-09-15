@@ -1,0 +1,12 @@
+<!-- 
+	Created by Sujeethan Vigneswaran
+	sujeethan.vigneswaran@gmail.com
+	2018
+-->
+
+<select ng-model = 'selected_nature_reserves[$index]'
+    class = "item-value"
+    ng-change = "update_people_search();"
+    style = "width:calc(100% - 60px); left:0px;">
+	<option value="{{_app.selected_nature_reserve.property_name}}">{{_app.selected_nature_reserve.property_name}}</option>
+</select>

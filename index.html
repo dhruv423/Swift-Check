@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html ng-app="App"> <!-- Key thing to single page application! -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" type= "text/css" href="css/bootstrap.min.css" >
+<link rel="stylesheet" type= "text/css" href="css/glyphicons.css" >
+<link rel="stylesheet" type= "text/css" href="css/animate.css" >
+<link rel="stylesheet" type= "text/css" href="css/GeneralInfo.css" >
+	
+<!--
+ Created by Sujeethan Vigneswaran
+ 2018
+ sujeethan.vigneswaran@gmail.com
+-->
+
+<script type = "text/javascript" src= "js/lib/jquery-3.2.1.min.js"></script>
+<script type = "text/javascript" src= "js/lib/angular.min.js"></script>
+<script type = "text/javascript" src= "js/lib/popper.min.js"></script>
+<script type = "text/javascript" src= "js/lib/bootstrap.min.js"></script>
+<script type = "text/javascript" src="js/lib/ResizeSensor.js"></script>
+<script type = "text/javascript" src="js/lib/ElementQueries.js"></script>
+<script type = "text/javascript" src= "js/Tools.js"></script>
+<script type = "text/javascript" src= "js/AngularCode.js"></script>
+<script type = "text/javascript" src= "js/GeneralInfo.js"></script>
+<script type = "text/javascript" src= "js/PeopleCategoryList.js"></script>
+<script type = "text/javascript" src= "js/MapCode.js"></script>
+<script type = "text/javascript" src= "js/People.js"></script>
+<script type = "text/javascript" src= "js/Tract.js"></script>
+
+
+<head> <link rel="shortcut icon" href="favicon.ico"></head>
+<title>Swift Check</title><!-- Title is what is read on the top of browser tab. -->
+
+<!-- NG-CONTROLLER gives all the JAVASCRIPT/HTML binding functionallity, Check out App.JS --> 
+<body ng-app="App" ng-controller="App as _app" id = 'body'><!-- onload = "load_google_maps();" -->
+	<!-- MapScreen.html holds all the nitty-gritty html code -->
+
+<div ng-include = '"html/Navbar.html"' onload="_app.loadedNavbar();"></div>
+ 
+ 
+	
+<!-- Put Pages with Multiples Cards Here -->
+	
+<!-- People Pages -->
+	<!-- Card One -->
+<div ng-show = "_app.page == 'people'" ng-include = "'html/People/People.html'" style = "padding:15px;"></div>
+	<!-- Card Two -->
+<div ng-show = "_app.page == 'add-person'" ng-repeat = 'person in _app.people_found' ng-include = "'html/People/PeopleCard.html'" style = "text-align:left"></div>
+	
+ <!-- General Info Welcome -->
+ <div ng-show = "_app.page == 'genral-info' && _app.selected_nature_reserve.welcome_screen == 'true'" ng-include = "'html/Acquisition/GenralInfo-intro.html'" style = "padding:15px; text-align:center;margin:24px;"></div>
+	
+	
+ <!-- General Info Data -->
+	<!-- Card One -->
+	<div ng-show = "_app.page == 'genral-info' && _app.selected_nature_reserve.welcome_screen != 'true'" ng-include = "'html/Acquisition/GeneralInfo.html'" style = "padding:5px;margin:24px;" ></div>
+	<!-- Card Two -->
+	<div ng-show = "_app.page == 'genral-info' && _app.selected_nature_reserve.welcome_screen != 'true'" ng-include = "'html/Acquisition/GeneralInfoPeopleSearch.html'" style = "padding:5px;margin:24px;"></div>
+
+	
+  <!-- Tracts Screen -->
+	<!-- Card One -->
+  <div ng-show = "_app.page == 'tract'" ng-include = "'html/Tract/TractSearch.html'" style = "padding:15px; text-align:left"></div> 
+	<!-- Card Two -->
+  <div ng-show = "_app.page == 'add-tract'" ng-repeat = 'tract in _app.tracts_found' ng-include = "'html/Tract/TractCard.html'" style = "text-align:left"></div>
+	
+	<!-- Put Pages with EXACTLY ONE Card Here -->
+<div class="card" style = " margin:24px;" ng-hide = "_app.page == 'people'">
+
+ 
+ <!-- Welcome Screen -->
+ <div class="card-body" ng-show = "_app.page == 'home'" ng-include = "'html/Welcome.html'" style = "padding:15px; text-align:center;"></div>
+
+
+</div>
+</div> <!-- END Card Pages -->
+
+
+
+
+    
+</body>
+</html>	
+
+<!--  -->

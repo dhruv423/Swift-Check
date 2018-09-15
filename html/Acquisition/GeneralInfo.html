@@ -1,0 +1,247 @@
+<!-- This is the first Card on the General Page -->
+
+<div class="card" style = "position:relative;">
+<!-- TOP BANNER & TITLE --> 
+<div style = ' text-align:center; width:100%;'>
+ <h2 style = 'background-color:rgba(255,255,255,.5); margin:0px; padding:15px; color:#000;'>{{_app.selected_nature_reserve.property_name}}</h2>
+<div style = " width: 100%;
+  height: 240px;
+  background-position: center center;
+  background-size:  cover;
+
+  background-repeat: no-repeat;
+  background-image: url('{{_app.selected_nature_reserve.feature_image}}');
+  "></div>
+</div>
+ 
+
+
+<br />
+
+<!-- CONTENT/DATA -->
+
+<div class="row"><!-- NEW ROW -->
+<div class="col-md-6" ><!-- COLOUMN 1 -->
+
+
+<p class = "item-header">Property Name</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.property_name}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.property_name_edit' style = "width:100%;"/>
+
+<p class = "item-header">Acronym</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.acronym}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.acronym_edit' style = "width:100%;"/>
+
+<p class = "item-header">Property Owner</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.property_owner}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.property_owner_edit' style = "width:100%;"/>
+
+<p class = "item-header">Land Tenure</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.land_tenure}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.land_tenure_edit' style = "width:100%;"/>
+
+
+<p class = "item-header">Acquisition Date</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.acquisition_date}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.acquisition_date_edit' style = "width:100%;"/>
+
+<p class = "item-header">Property Size Hectares</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.property_size_hectares}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.property_size_hectares_edit' style = "width:100%;"/>
+
+<p class = "item-header">Property Size Acres</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.property_size_acres}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.property_size_acres_edit' style = "width:100%;"/>
+
+<p class = "item-header">Legal Description</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.legal_description}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.legal_description_edit' style = "width:100%;"/>
+
+
+<p class = "item-header">Atlas Square</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.atlas_square}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.atlas_square_edit' style = "width:100%;"/>
+
+<p class = "item-header">NHIC ID Number</p>
+<p class = "item-value"ng-hide = "_app.selected_nature_reserve.editing" >{{_app.selected_nature_reserve.nhic_id_number}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.nhic_id_number_edit' style = "width:100%;"/>
+
+</div><!-- END COLOUMN 1 -->
+
+<div class="col-md-6"><!-- COLOUMN 2 -->
+
+<p class = "item-header">County</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing" >{{_app.selected_nature_reserve.county}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.county_edit' style = "width:100%;"/>
+
+<p class = "item-header">Municipality</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.municipality}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.municipality_edit' style = "width:100%;"/>
+
+<p class = "item-header">Township</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.township}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.township_edit' style = "width:100%;"/>
+
+<p class = "item-header">Ecoregion</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.ecoregion}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.ecoregion_edit' style = "width:100%;"/>
+
+<p class = "item-header">Ecodistrict</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.ecodistrict}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.ecodistrict_edit' style = "width:100%;"/>
+
+<p class = "item-header">MNRF Region</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.mnrf_region}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.mnrf_region_edit' style = "width:100%;"/>
+
+<p class = "item-header">MNRF District</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.mnrf_district}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.mnrf_district_edit' style = "width:100%;"/>
+
+<p class = "item-header">Tertiary Watershed</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.tertiary_watershed}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.tertiary_watershed_edit' style = "width:100%;"/>
+
+<p class = "item-header">Environmental Designations</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.environmental_designations}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.environmental_designations_edit' style = "width:100%;"/>
+
+</div><!-- END COLOUMN 2 -->
+
+</div><!-- END ROW  -->
+
+
+<hr />
+
+
+<div class="row"><!-- NEW ROW -->
+
+
+<!-- GOOGLE MAP  (COLOUMN 1)-->
+<div class="col-md-6">
+ 
+	
+	
+	
+	
+	
+	<!-- WORKING HERE-->
+	
+	
+	
+	
+	<!-- id="map-canvas"-->
+ <div id="map-canvas" style = "width:100%; height: 200px;">
+ </div>
+	
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing" align= 'right' style = "font-size:14px;">({{_app.selected_nature_reserve.latitude}}, {{_app.selected_nature_reserve.longitude}})</p>
+
+<p class = "item-header" ng-show = "_app.selected_nature_reserve.editing">Latitude</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.latitude_edit' style = "width:100%;"/>
+<p class = "item-header" ng-show = "_app.selected_nature_reserve.editing">Longitude</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.longitude_edit' style = "width:100%;"/>
+</div><!--END COLOUMN 1 (GOOGLE MAP)-->
+
+
+<div class="col-md-6"> <!-- COLOUMN 2 -->
+
+
+<p class = "item-header">Directions</p>
+<p class = "item-value" ng-hide = "_app.selected_nature_reserve.editing">{{_app.selected_nature_reserve.directions}}</p>
+<textarea  ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.directions_edit' style = "width:100%;"></textarea>
+
+
+</div><!-- END COLOUMN 2 -->
+</div><!-- END ROW -->
+
+<hr />
+
+<div class="row"><!-- NEW ROW -->
+<div class="col-md-12"><!-- FULL SIZE COLOMN -->
+
+<p class = "item-header">Feature Image</p>
+<p class = "item-value"  ng-hide = "_app.selected_nature_reserve.editing" style = 'word-break: break-all'>{{_app.selected_nature_reserve.feature_image}}</p>
+<input type="text" ng-show = "_app.selected_nature_reserve.editing" ng-model = '_app.selected_nature_reserve.feature_image_edit' style = "width:100%;"/>
+</div><!-- END COLOMN -->
+
+</div><!-- END ROW -->
+
+<div class="row"><!-- NEW ROW -->
+<div class="col-md-12"><!-- FULL SIZE COLOMN -->
+
+<p class = "item-header">Share&nbsp;<span class="glyphicons glyphicons-share"></span></p>
+<p class = "item-value"  style = 'word-break: break-all'>https://www.ontarionature.org/nature_reserves/db/general_info/?acronym={{_app.selected_nature_reserve.acronym}}</p>
+
+</div><!-- END COLOMN -->
+
+</div><!-- END ROW -->
+
+<div style = 'text-align:right'>
+ <hr />
+<button 
+ng-click = '_app.edit_genral_info(_app.selected_nature_reserve);'
+ type="button" 
+ class="btn btn-primary" 
+ ng-hide = '_app.selected_nature_reserve.editing'
+ style = "position:relative"
+ >&nbsp;&nbsp;Edit <span class = "glyphicons glyphicons-pencil" style = "position:relative; top:5px"></span>&nbsp;&nbsp;</button>
+ 
+  <button 
+ ng-click = "_app.cancel_edit_genral_info(_app.selected_nature_reserve);"
+ng-show = '_app.selected_nature_reserve.editing'
+ type="button" 
+ class="btn btn-warning" 
+ style = "position:relative"
+ >&nbsp;&nbsp;Cancel <span class = "glyphicons glyphicons-remove" style = "position:relative; top:5px"></span>&nbsp;&nbsp;</button>
+
+ <button 
+ ng-click = "_app.save_edit_genral_info(_app.selected_nature_reserve);"
+ng-show = '_app.selected_nature_reserve.editing && !_app.selected_nature_reserve.saving'
+ type="button" 
+ class="btn btn-success" 
+ style = "position:relative"
+ >&nbsp;&nbsp;Save <span class = "glyphicons glyphicons-floppy-disk" style = "position:relative; top:5px"></span>&nbsp;&nbsp;</button>
+ 
+ <p ng-show = "_app.selected_nature_reserve.editing && _app.selected_nature_reserve.saving" style = "display:inline">Saving...</p>
+ <hr />
+ 
+ </div>
+
+</div><!-- END CONTENT/DATA -->
+
+
+<!-- 
+ 
+<p>property_name: {{_app.selected_nature_reserve.property_name}}</p>
+<p>acronym: {{_app.selected_nature_reserve.acronym}}</p>
+<p>property_owner: {{_app.selected_nature_reserve.property_owner}}</p>
+<p>land_tenure: {{_app.selected_nature_reserve.land_tenure}}</p>
+<p>acquisition_date: {{_app.selected_nature_reserve.acquisition_date}}</p>
+<p>property_size_hectares: {{_app.selected_nature_reserve.property_size_hectares}}</p>
+<p>property_size_acres: {{_app.selected_nature_reserve.property_size_acres}}</p>
+<p>county: {{_app.selected_nature_reserve.county}}</p>
+<p>munipality: {{_app.selected_nature_reserve.munipality}}</p>
+
+<p>township: {{_app.selected_nature_reserve.township}}</p>
+<p>legal_description: {{_app.selected_nature_reserve.legal_description}}</p>
+<p>latitude: {{_app.selected_nature_reserve.latitude}}</p>
+<p>longitude: {{_app.selected_nature_reserve.longitude}}</p>
+<p>ecoregion: {{_app.selected_nature_reserve.ecoregion}}</p>
+<p>ecodistrict: {{_app.selected_nature_reserve.ecodistrict}}</p>
+<p>mnrf_region: {{_app.selected_nature_reserve.mnrf_region}}</p>
+<p>mnrf_district: {{_app.selected_nature_reserve.mnrf_district}}</p>
+
+<p>tertiary_watershed: {{_app.selected_nature_reserve.tertiary_watershed}}</p>
+<p>environmental_designations: {{_app.selected_nature_reserve.environmental_designations}}</p>
+<p>feature_image: {{_app.selected_nature_reserve.feature_image}}</p>
+<p>atlas_square: {{_app.selected_nature_reserve.atlas_square}}</p>
+<p>nhic_id_number: {{_app.selected_nature_reserve.nhic_id_number}}</p>
+<p>directions: {{_app.selected_nature_reserve.directions}}</p>
+
+
+-->
+
+
+
+
+

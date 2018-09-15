@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+body{
+	background-color: rgb(232,228,219);
+
+}
+.bold{
+ 	font-weight:bold;
+}
+
+.interactive{
+	cursor:pointer;
+}
+.blue{
+	color:#09F;
+}
+.red{
+	color:#FF0000;
+}
+.warn{
+	color:#F30;"
+}
+
+.green{
+	color:#0C0;
+}
+.orange{
+	color:#F30;
+}
+.grey{
+	color:#999;
+}
+
+.can-touch{
+	-webkit-touch-callout: default;
+    -webkit-user-select: auto;
+    -khtml-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+	pointer-events: auto;
+}
+
+
+.no-touch{
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	pointer-events: none;
+}
+.no-select{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.item-header{
+	font-weight:bold;
+	font-size:16px;
+	line-height:20px;
+	margin:0px; 
+	padding:0px;
+}
+
+.item-value{
+	/*font-weight:bold;*/
+	font-size:20px;
+	line-height:20px;
+	margin:0px; 
+	padding:0px;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	position:relative;
+	left:20px;
+	width:calc(100% - 40px);
+	border-bottom: thin solid rgba(100,100,100,.25);
+}
+
