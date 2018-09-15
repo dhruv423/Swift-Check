@@ -72,10 +72,6 @@ app.controller('App',function($scope,$rootScope){
 				}
 			}
 		});
-		init_GeneralInfo();
-		load_google_maps();
-		init_People();
-		init_Tract();
 		
 	}
 

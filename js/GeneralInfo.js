@@ -205,7 +205,6 @@ app.directive('generalInfoPeopleSearchBar', function () {
 			$scope.options = [''];
 			$scope.selected_nature_reserves = [''];
 			$scope.search_text = '';
-			init_Categories($scope);
 			//$scope.select_nature_reserve_filter = "";
 			$scope.serching_for_people = false;
 		
