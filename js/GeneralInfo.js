@@ -18,7 +18,7 @@ function init_GeneralInfo(){
 		data:{},
 		success: gotGeneralInfo,
 		error:function (){
-			var result = confirm("Database Connect Error!\nTry again?");
+			//var result = confirm("Database Connect Error!\nTry again?");
 			if(result){
 				lookup_NatureReserves();
 			}
