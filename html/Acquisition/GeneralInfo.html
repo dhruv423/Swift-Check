@@ -9,8 +9,17 @@
 <p>To start, Press the start button.</p>
 
 <button type="button" ng-click="_app.gotoPage('home');">Go home home boy</button>
+		
+<video id="video" width="640" height="480" autoplay></video>
 
-<br />
+  <h6><span id="status">Loading base model...</span>
+  <p>
+    <button ng-click = "classifyVideo();">Click to Check Out Item</button>
+	<br>
+    This item is: <span id="result">...</span>
+	Confidence: <span id="probability">...</span>
+  </p>
+  <script src="Tensorflow.js"></script>
 
 <br />
 </div>
