@@ -18,8 +18,6 @@ app.controller('App',function($scope,$rootScope){
 	}
 	
 	_app.page = "home";
-	_app.nature_reserves = [{property_name:"Loading Data... ",welcome_screen:'true'}];
-	_app.selected_nature_reserve = _app.nature_reserves[0];
 	
 	_app.gotoPage = function(page){
 		_app.page = page;

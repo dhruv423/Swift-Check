@@ -50,41 +50,16 @@
 	<!-- MapScreen.html holds all the nitty-gritty html code -->
 
 <div ng-include = '"html/Navbar.html"' onload="_app.loadedNavbar();"></div>
- 
- 
 	
 <!-- Put Pages with Multiples Cards Here -->
 	
-<!-- People Pages -->
-	<!-- Card One -->
-<div ng-show = "_app.page == 'people'" ng-include = "'html/People/People.html'" style = "padding:15px;"></div>
-	<!-- Card Two -->
-<div ng-show = "_app.page == 'add-person'" ng-repeat = 'person in _app.people_found' ng-include = "'html/People/PeopleCard.html'" style = "text-align:left"></div>
+ <!-- Checkout Page -->
+ <div ng-show = "_app.page == 'checkout'" ng-include = "'html/Acquisition/GenralInfo.html'" style = "padding:15px; text-align:center;margin:24px;"></div>
 	
- <!-- General Info Welcome -->
- <div ng-show = "_app.page == 'genral-info' && _app.selected_nature_reserve.welcome_screen == 'true'" ng-include = "'html/Acquisition/GenralInfo-intro.html'" style = "padding:15px; text-align:center;margin:24px;"></div>
-	
-	
- <!-- General Info Data -->
-	<!-- Card One -->
-	<div ng-show = "_app.page == 'genral-info' && _app.selected_nature_reserve.welcome_screen != 'true'" ng-include = "'html/Acquisition/GeneralInfo.html'" style = "padding:5px;margin:24px;" ></div>
-	<!-- Card Two -->
-	<div ng-show = "_app.page == 'genral-info' && _app.selected_nature_reserve.welcome_screen != 'true'" ng-include = "'html/Acquisition/GeneralInfoPeopleSearch.html'" style = "padding:5px;margin:24px;"></div>
-
-	
-  <!-- Tracts Screen -->
-	<!-- Card One -->
-  <div ng-show = "_app.page == 'tract'" ng-include = "'html/Tract/TractSearch.html'" style = "padding:15px; text-align:left"></div> 
-	<!-- Card Two -->
-  <div ng-show = "_app.page == 'add-tract'" ng-repeat = 'tract in _app.tracts_found' ng-include = "'html/Tract/TractCard.html'" style = "text-align:left"></div>
-	
-	<!-- Put Pages with EXACTLY ONE Card Here -->
-<div class="card" style = " margin:24px;" ng-hide = "_app.page == 'people'">
-
+<!-- Put Pages with EXACTLY ONE Card Here -->
  
  <!-- Welcome Screen -->
  <div class="card-body" ng-show = "_app.page == 'home'" ng-include = "'html/Welcome.html'" style = "padding:15px; text-align:center;"></div>
-
 
 </div>
 </div>
