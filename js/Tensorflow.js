@@ -1,39 +1,81 @@
-// Initialize the Image Classifier method with MobileNet. A callback needs to be passed.
-const classifier = ml5.imageClassifier('MobileNet', modelReady);
-
-// A variable to hold the image we want to classify
-let img;
-
-// Extract the already learned features from MobileNet
-const featureExtractor = ml5.featureExtractor('MobileNet', modelLoaded);
+let featureExtractor;
+let classifier;
+let video;
+let loss;
+let dogImages = 0;
+let banana1Images = 0;
+let banana2Images = 0;
+let banana3Images = 0;
+let appleImages = 0;
+let catImages = 0;
 
 function setup() {
   noCanvas();
-  // Load the image
-  img = createImg('images/bird.jpg', imageReady);
-  img.size(300, 300);
+  // Create a video element
+  video = createCapture(VIDEO);
+  // Append it to the videoContainer DOM element
+  video.parent('videoContainer');
+  // Extract the already learned features from MobileNet
+  featureExtractor = ml5.featureExtractor('MobileNet', modelReady);
+  // Create a new classifier using those features and give the video we want to use
+  classifier = featureExtractor.classification(video, videoReady);
+  // Create the UI buttons
+  setupButtons();
 }
 
-// Change the status when the model loads.
-function modelReady(){
-  select('#status').html('Model Loaded')
+// A function to be called when the model has been loaded
+function modelReady() {
+  select('#modelStatus').html('Base Model (MobileNet) loaded!');
 }
 
-// When the image has been loaded,
-// get a prediction for that image
-function imageReady() {
-  classifier.predict(img, gotResult);
-  // You can also specify the amount of classes you want
-  // classifier.predict(img, 10, gotResult);
+// A function to be called when the video has loaded
+function videoReady () {
+  select('#videoStatus').html('Video ready!');
 }
 
-// A function to run when we get any errors and the results
-function gotResult(err, results) {
-  // Display error in the console
+
+// Classify the current frame.
+function classify() {
+  classifier.classify(gotResults);
+}
+
+// A util function to create UI buttons
+function setupButtons() {
+	classifier.addImage('image/banana1/img', 'banana1');
+	select('#amountOfBanana1Images').html(banana1Images++);
+	
+	classifier.addImage('banana2');
+	select('#amountOfBanana2Images').html(banana2Images++);
+	
+	classifier.addImage('banana3');
+	select('#amountOfBanana3Images').html(banana3Images++);
+	
+	classifier.addImage('apple');
+	select('#amountOfAppleImages').html(AppleImages++);
+
+  // Train Button
+  train = select('#train');
+  train.mousePressed(function() {
+    classifier.train(function(lossValue) {
+      if (lossValue) {
+        loss = lossValue;
+        select('#loss').html('Loss: ' + loss);
+      } else {
+        select('#loss').html('Done Training! Final Loss: ' + loss);
+      }
+    });
+  });
+
+  // Predict Button
+  buttonPredict = select('#buttonPredict');
+  buttonPredict.mousePressed(classify);
+}
+
+// Show the results
+function gotResults(err, result) {
   if (err) {
     console.error(err);
   }
-  // The results are in an array ordered by probability.
-  select('#result').html(results[0].className);
-  select('#probability').html(nf(results[0].probability, 0, 2));
+  select('#result').html(result);
+  classify();
 }
