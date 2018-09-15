@@ -1,25 +1,13 @@
 /*
- Created by Bradley McGinn. 
- 2017
- brad.mcginn@gmail.com 
- 
  Maintained by Sujeethan Vigneswaran
  2018
  sujeethan.vigneswaran@gmail.com
  */
 
-
-
 var app = angular.module('App', []);
 var _app; 
 
-
-
-
-
-
-app.controller('App',function($scope,$rootScope){
-	
+app.controller('App',function($scope,$rootScope){	
 	
 	_app = this;// Global refrence;
 	_app.scope = $scope;
@@ -33,24 +21,10 @@ app.controller('App',function($scope,$rootScope){
 	_app.nature_reserves = [{property_name:"Loading Data... ",welcome_screen:'true'}];
 	_app.selected_nature_reserve = _app.nature_reserves[0];
 	
-	
 	_app.gotoPage = function(page){
-		if(_app.page == "add-person"){
-			 _app.people_found =_app.people_storage;
-		}
 		_app.page = page;
 		$('.navbar-collapse').collapse('hide');
-		if(page == "maps"){
-			var center = map.getCenter();
-			google.maps.event.trigger(map, "resize"); 
-			map.setCenter(center);
-		}
 	}
-	
-
-	//
-	
-	
 	
 	_app.loadedNavbar = function(){
 		var navbar = document.getElementById("navbar");
@@ -60,24 +34,11 @@ app.controller('App',function($scope,$rootScope){
 		new ResizeSensor(jQuery('#navbar'), function(){ 
 			var body = document.getElementById("body");
 			document.getElementById("body").style.marginTop = (navbar.offsetHeight+ 10) +"px";
-			if(_app.page == "maps"){
-				var map_canvas = document.getElementById("google-map");
-				if(map_canvas && navbar){
-					map_canvas.style.height = (window.innerHeight - navbar.offsetHeight)+"px"
-					map_canvas.style.top = navbar.offsetHeight+"px"
-					map_canvas.style.position = "fixed";
-					var center = map.getCenter();
-					google.maps.event.trigger(map, "resize"); 
-					map.setCenter(center);
-				}
-			}
 		});
 		
 	}
 
 });
-
-
 
 function getUrlVars() {
 	// Javasctipt GET

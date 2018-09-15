@@ -1,7 +1,4 @@
 /*
-	Created by Bradly McGin
-	2016
-	
 	Maintained by Sujeethan Vigneswaran
 	sujeethan.vigneswaran@gmail.com
 	2018

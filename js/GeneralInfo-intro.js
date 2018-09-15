@@ -153,30 +153,6 @@ function init_GeneralInfoIntro(){
 	
 }
 
-function gotGeneralInfo(data){
-	_app.nature_reserves = data.results;
-	
-
-	
-	_app.nature_reserves.unshift({property_name:"- None -",welcome_screen:'true'});
-	_app.selected_nature_reserve = _app.nature_reserves[0];
-	
-	
-	
-	if(url_choosen_reserve != undefined){
-		for(var i=1;i<_app.nature_reserves.length;i++){
-			_app.nature_reserves[i].editing = false;
-			_app.nature_reserves[i].saving = false;
-			if(_app.nature_reserves[i].acronym.toLowerCase() == url_choosen_reserve){
-				_app.selected_nature_reserve = _app.nature_reserves[i];
-				_app.selected_NR();
-			}
-		}
-	}
-	_app.applyScope();
-}
-
-
 
 
 
