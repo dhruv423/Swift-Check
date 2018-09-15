@@ -39,17 +39,23 @@ function classify() {
 
 // A util function to create UI buttons
 function setupButtons() {
+	
+	/**
 	classifier.addImage('classifier/banana1/img', 'banana1');
 	select('#amountOfBanana1Images').html(banana1Images++);
+	**/
 	
-	classifier.addImage('image/banana2/img', 'banana2');
+	classifier.addImage('image/banana2/15.jpeg', 'banana2');
 	select('#amountOfBanana2Images').html(banana2Images++);
 	
+	/**
 	classifier.addImage('image/banana3/img', 'banana3');
 	select('#amountOfBanana3Images').html(banana3Images++);
 	
 	classifier.addImage('image/apple/img', 'apple');
 	select('#amountOfAppleImages').html(AppleImages++);
+	
+	**/
 
   // Train Button
   train = select('#train');
