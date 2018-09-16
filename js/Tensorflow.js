@@ -2,8 +2,7 @@ let classifier;
 let video;
 
 function setup() {
-  //noCanvas();
-	createCanvas(10,0);
+  noCanvas();
   // Create a camera input
   video = createCapture(VIDEO);
   // Initialize the Image Classifier method with MobileNet and the video as the second argument
@@ -31,15 +30,7 @@ function gotResult(err, results) {
   else{
   select('#result').html(results[0].className);
   }
-  select('#probability').html(nf(results[0].probability, 0, 2));
+  select('#probability').html(Math.round(nf(results[0].probability, 0, 2)*100));
   classifyVideo();
   
-}
-
-function hideCam(){
-	video.hide();
-}
-
-function showCam(){
-	video = createCapture(VIDEO);
 }
