@@ -7,7 +7,6 @@ function r(){
         cart.pop();
         document.getElementById("table").deleteRow(cart.length+1);
 
-        
         let nitems = document.getElementById("n-items");
             
         nitems.innerHTML = cart.length;
