@@ -1,4 +1,5 @@
 # Swift-Check
+Created by: Sujeethan, Aarsh, Dhruv
 Hack the North 2018
 
 Used libraries:
