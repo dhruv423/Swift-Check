@@ -27,3 +27,7 @@ function display() {
             tprice.innerHTML = "$"+(cart.length*1.00);
         }
 }
+
+function clearReciept(){
+	
+}
