@@ -7,8 +7,11 @@ Hack the North 2018
 Libraries Used:
 <br />
   p5.js https://p5js.org/
+  <br />
   ml5.js https://ml5js.org/
+  <br />
   tensorflow.js https://js.tensorflow.org/
+  <br />
   angular.js https://angularjs.org/
  
 In traditional retail stores self checkouts are slow and tedious, produce don't have barcodes, barcodes are missing or broken and it takes forever for the one cashier to come over and help you out.
