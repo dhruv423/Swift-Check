@@ -5,6 +5,7 @@ The World's First Machine Learning Self Checkout Kiosk!
 Hack the North 2018
 
 Libraries Used:
+<br />
   p5.js https://p5js.org/
   ml5.js https://ml5js.org/
   tensorflow.js https://js.tensorflow.org/
