@@ -36,8 +36,6 @@ function gotResult(err, results) {
   classifyVideo();
   
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 function hideCam(){
 	video.hide();
