@@ -1,6 +1,3 @@
-<html>
-<head>
-<title>Checkout page</title>
 <style type="text/css"> 
      
   table{
@@ -15,51 +12,59 @@
   td{
       border:0px black solid;
   }
+</style>
+	
+<div class="card" style = "position:relative;">
+	<div class="container">
+  <br />
+
+	<div class="row">
+		<div class="col-md-12" align="center">
+  <button type="button" ng-click="_app.gotoPage('home');">Go back to the Welcome Screen</button>
+			<br />
+			<br />
+		</div>
+	</div>
+	
+      
+	
+  <h3 align="center">Please Place the Item in Front of the Camera</h3>
+		
+<!--<p class = "item-header" align="center">Scan then Press Add to Cart</p>-->
+
+ 	<div class="row">
+		<div class="col-md-12" align="center">
+			<h6><span id="status">Loading base model...</span></h6>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12" align="center">
+			<p>
+		<h5>Confidence:</h5> <span id="probability">...</span>
+			<br />
+    	<h5>This item is:</h5> <span id="result">...</span>
+    	
+    		</p>
+			<button ng-click = "classifyVideo();" onclick = "display()"><h2>Add Item To Cart</h2></button>
+		</div>
+		<div class="col-md-6" align="center">
+			
+		</div>
+	</div>
+		<script src="Tensorflow.js"></script>
+		<script src="reciept.js"></script>
+			<table id = "table" cellpadding=5 cellspacing=10>
+     			<tr>
+          			<td>Item <div id = "n-items"> </div></td>
+          			<td>Weight</td>
+          			<td>Price <div id = "total_price"></div></td>
+      			</tr>
+  			</table>
+			<br />
+  <br />
+  
   
 
-</style>
-<!-- Most simple page ever-->
-<div class="card" style = "position:relative;">
 </div>
-</head>
-
-<body>
-  <br />
-
-  <h3>Page 2</h3>
-  <table id = "table" cellpadding=5 cellspacing=10>
-      <tr>
-          <th>Item <div id = "n-items"> </div></th>
-          <th>Weight</th>
-          <th>Price <div id = "total_price"></div></th>
-      </tr>
-      
-  </table>
-
-  <h5>This is going to be easy.</h5>
-
-  <p>Scan and press add to cart</p>
-
-
-
-  <button type="button" ng-click="_app.gotoPage('home');">Go back home</button>
-      
- 
-
-    <h6><span id="status">Loading base model...</span></h6>
-    <p>
-      
-      <button ng-click = "classifyVideo();" onclick = "display()">Click to add item to cart</button>
-    <br>
-    This item is: <span id="result">...</span>
-    Confidence: <span id="probability">...</span>
-    </p>
-    
-
-  <br />
-  </div>
-  <script src="Tensorflow.js"></script>
-  <script src="reciept.js"></script>
-</body>
-
-</html>
+</div>

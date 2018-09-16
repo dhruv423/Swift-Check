@@ -2,7 +2,8 @@ let classifier;
 let video;
 
 function setup() {
-  noCanvas();
+  //noCanvas();
+	createCanvas(10,0);
   // Create a camera input
   video = createCapture(VIDEO);
   // Initialize the Image Classifier method with MobileNet and the video as the second argument

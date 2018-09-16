@@ -2,8 +2,6 @@
 let cart = [];
 
 
-
-
 function display() {
 
         let item = String(document.getElementById("result").innerHTML);
