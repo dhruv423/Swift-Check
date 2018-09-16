@@ -24,7 +24,13 @@ function classifyVideo() {
 // When we get a result
 function gotResult(err, results) {
   // The results are in an array ordered by probability.
+  if(results[0].className == "Granny Smith" || results[0].className == "pomegranate"){
+    select('#result').html('apple')
+  }
+  else{
   select('#result').html(results[0].className);
+  }
   select('#probability').html(nf(results[0].probability, 0, 2));
   classifyVideo();
+  
 }
