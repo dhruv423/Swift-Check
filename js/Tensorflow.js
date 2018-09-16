@@ -50,7 +50,4 @@ function showCam(){
 		//nothing
 	}
 }
-=======
->>>>>>> 6da213173ea5fd9bc683bdfdf7eb0cdee894d096
-=======
->>>>>>> 895dda8b92cc4ce415dc0a4fa6a2a281e3c9fc4b
+
