@@ -1,13 +1,18 @@
-
+<!DOCTYPE html>
 <html ng-app="App"> <!-- Key thing to single page application! -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-	<link rel="stylesheet" type= "text/css" href="css/bootstrap.min.css" >
-	<link rel="stylesheet" type= "text/css" href="css/glyphicons.css" >
-	<link rel="stylesheet" type= "text/css" href="css/animate.css" >
-	<link rel="stylesheet" type= "text/css" href="css/GeneralInfo.css" >
-
+<link rel="stylesheet" type= "text/css" href="css/bootstrap.min.css" >
+<link rel="stylesheet" type= "text/css" href="css/glyphicons.css" >
+<link rel="stylesheet" type= "text/css" href="css/animate.css" >
+<link rel="stylesheet" type= "text/css" href="css/GeneralInfo.css" >
+	
+<!--
+ Created by Sujeethan Vigneswaran
+ 2018
+ sujeethan.vigneswaran@gmail.com
+-->
 
 <script type = "text/javascript" src= "js/lib/jquery-3.2.1.min.js"></script>
 <script type = "text/javascript" src= "js/lib/angular.min.js"></script>
@@ -16,7 +21,7 @@
 <script type = "text/javascript" src="js/lib/ResizeSensor.js"></script>
 <script type = "text/javascript" src="js/lib/ElementQueries.js"></script>
 <script type = "text/javascript" src= "js/AngularCode.js"></script>
-
+<script type = "text/javascript" src= "js/GeneralInfo.js"></script>
 	
 <!-- Load ML5.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
@@ -28,7 +33,8 @@
 <title>Swift Check</title><!-- Title is what is read on the top of browser tab. -->
 
 <!-- NG-CONTROLLER gives all the JAVASCRIPT/HTML binding functionallity, Check out App.JS --> 
-<body ng-app="App" ng-controller="App as _app" id = 'body'>
+<body ng-app="App" ng-controller="App as _app" id = 'body'><!-- onload = "load_google_maps();" -->
+	<!-- MapScreen.html holds all the nitty-gritty html code -->
 
 <div ng-include = '"html/Navbar.html"' onload="_app.loadedNavbar();"></div>
 	
@@ -42,6 +48,8 @@
  <!-- Welcome Screen -->
  <div class="card-body" ng-show = "_app.page == 'home'" ng-include = "'html/Welcome.html'" style = "padding:15px; text-align:center;"></div>
 
-
+</div>
+</div>
     
-
+</body>
+</html>	
