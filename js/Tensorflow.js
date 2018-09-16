@@ -35,3 +35,11 @@ function gotResult(err, results) {
   classifyVideo();
   
 }
+
+function hideCam(){
+	video.hide();
+}
+
+function showCam(){
+	video = createCapture(VIDEO);
+}
