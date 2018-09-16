@@ -11,7 +11,6 @@ function r(){
         let nitems = document.getElementById("n-items");
             
         nitems.innerHTML = cart.length;
-
         let tprice = document.getElementById("total_price");
         tprice.innerHTML = "$"+(cart.length*1.00);
     }
