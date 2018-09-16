@@ -2,6 +2,21 @@
 let cart = [];
 
 
+function r(){
+    if(cart.length>0){
+        cart.pop();
+        document.getElementById("table").deleteRow(cart.length+1);
+
+        
+        let nitems = document.getElementById("n-items");
+            
+        nitems.innerHTML = cart.length;
+
+        let tprice = document.getElementById("total_price");
+        tprice.innerHTML = "$"+(cart.length*1.00);
+    }
+}
+
 function display() {
 
         let item = String(document.getElementById("result").innerHTML);
@@ -26,8 +41,4 @@ function display() {
             let tprice = document.getElementById("total_price");
             tprice.innerHTML = "$"+(cart.length*1.00);
         }
-}
-
-function clearReciept(){
-	
 }
