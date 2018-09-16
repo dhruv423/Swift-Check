@@ -1,8 +1,11 @@
 # Swift-Check
 Created by: Sujeethan Vigneswaran, Aarsh Patel, Dhruv Bhavsar
 
-The World's First Machine Learning Self Checkout Kiosk!
+
 Hack the North 2018
+<br />
+The World's First Machine Learning Self Checkout Kiosk!
+
 
 Libraries Used:
 <br />
